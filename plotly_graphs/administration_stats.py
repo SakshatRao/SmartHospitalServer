@@ -28,7 +28,6 @@ ward_map = {
 
 # To find room occupancy percentage
 def room_occupancy(patient_db):
-    print("Room Occupancy")
     avail_rooms = np.arange(1, 51)
     occupied_rooms = np.unique([x.room_number for x in patient_db if (x.room_number is not None) & (x.room_number in avail_rooms)])
 
@@ -243,17 +242,20 @@ def admission_discharge_rate(all_patient_db):
     #%%
     admission = all_dates.merge(admission, how = 'left', left_on = 'date', right_on = 'admission_date')[['date', 'id']].fillna(0)
     discharge = all_dates.merge(discharge, how = 'left', left_on = 'date', right_on = 'discharge_date')[['date', 'id']].fillna(0)
+
+    print(admission)
+    print(discharge)
     #%%
     data = [
         go.Scatter(
             x = admission['date'], y = admission['id'],
-            name = 'Admission', fill = 'tozerox',
+            name = 'Admission', fill = 'tozeroy',
             mode = 'lines', line = dict(color = 'blue'),
             hovertemplate = 'Admissions: %{y}<br>%{x}<extra></extra>'
         ),
         go.Scatter(
             x = discharge['date'], y = discharge['id'],
-            name = 'Discharge', fill = 'tozerox',
+            name = 'Discharge', fill = 'tozeroy',
             mode = 'lines', line = dict(color = 'red'),
             hovertemplate = 'Discharges: %{y}<br>%{x}<extra></extra>'
         ),
