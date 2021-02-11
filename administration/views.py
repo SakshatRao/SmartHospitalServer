@@ -8,7 +8,7 @@ import datetime
 from django.contrib.auth.models import User
 from accounts.models import Patient, Staff, All_Patient, All_Staff
 from EHR.models import Bill_entry
-from plotly_graphs import administration_stats as stats
+#from plotly_graphs import administration_stats as stats
 
 # Admin Homepage (Requires admin login)
 @admin_access()
@@ -24,16 +24,17 @@ def stats_view(request):
     staff_db = Staff.objects.all()
     bill_db = Bill_entry.objects.all()
     
-    stats.room_occupancy(patient_db)
-    stats.monthly_billing(bill_db)
-    stats.gender_ratio(staff_db)
-    stats.daily_billing(bill_db)
-    stats.patient_geomap(patient_db)
-    stats.age_histogram(patient_db)
-    stats.admission_discharge_rate(all_patient_db)
+    #stats.room_occupancy(patient_db)
+    #stats.monthly_billing(bill_db)
+    #stats.gender_ratio(staff_db)
+    #stats.daily_billing(bill_db)
+    #stats.patient_geomap(patient_db)
+    #stats.age_histogram(patient_db)
+    #stats.admission_discharge_rate(all_patient_db)
 
     http_dict = http_dict_func(request)
-    return render(request, 'administration/stats.html', http_dict)
+    return HttpResponse("Admin Stats")
+    #return render(request, 'administration/stats.html', http_dict)
 
 # Validation of Staff (requires admin login)
 @admin_access()
