@@ -1,11 +1,25 @@
 # Web Server
 
+## Demo
+
+---
+
+Check out the website at https://smart-hospital-server.herokuapp.com/
+
+For more information about the hardware, refer to my other repo - https://github.com/SakshatRao/SmartHospital
+
 ## Account Types
+
+---
+
 1. Patient
 2. Hospital Staff
 3. Hospital Administration
 
 ## Functionality
+
+---
+
 ### Patient Account
 - Viewing Electronic Health Records
 - Monitoring individual vital measurements
@@ -18,11 +32,3 @@
 - Viewing Hospital Statistics
 - Validating Hospital Staff accounts
 - Deleting Hospital Staff accounts
-
-## Apps
-- Main: For main homepage
-- Accounts: For managing accounts
-- Patient: For patient account
-- Administration: For admin account
-- Staff: For staff account
-- EHR: For EHR updates
