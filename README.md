@@ -4,7 +4,9 @@
 
 ---
 
-Check out the website at https://smart-hospital-server.herokuapp.com/
+Check out a quick demonstration of our project at https://www.youtube.com/watch?v=sNxa3SpIbTA!
+
+Check out the website at https://smart-hospital-server.herokuapp.com/!
 
 For more information about the hardware, refer to my other repo - https://github.com/SakshatRao/SmartHospital
 
